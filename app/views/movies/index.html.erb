@@ -1,0 +1,54 @@
+<% if !user_signed_in? %>
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">Jorah Entertainment</h1>
+    <p class="lead">Download ,Watch For Free in our Movie Store</p>
+     <p><%= link_to "Sign Up before adding movie", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+  </div>
+</div>
+ <% end %>
+
+<div class="row">
+  <% @movies.each do |movie| %>
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+    </div>
+  </div>
+
+ <% end -%>
+</div>
+<div class="row mb-8">
+
+        <div class="col-sm-12 col-lg-4">
+       <h4>Adrress</h4>
+       <p>Country :Rwanda</p>
+       <p>City :Kigali</p>
+       <p>Sector :Nyarugenge</p>
+       <p>Bulding :Makuza Peace Plaza</p>
+        </div>
+      <div class="col-sm-12 col-lg-4">
+         <h4>  Follow Us On </h4> 
+         <p>Twitter:Jorah Ent 2019</p>
+         <p>Facebook: Jorah Ent 2019</p>
+         <p>Instagram:Jorah Ent 2019</p>
+      </div>
+      <div class="col-sm-12 col-lg-4">
+          <h4>Let's Talk</h4>
+          <p>Tel:0787879549</p>
+          <p>Email:uwiduhayenadine@gmail.com</p>
+      </div>
+      </div>
+      <hr>
+ <div class="row mb-8">
+
+        <div class="col-sm-12 col-lg-2">
+          <a href=""><p>Community</a> <a href="">&nbsp&nbsp Tracks</a></p>
+        </div>
+      <div class="col-sm-12 col-lg-5">
+              
+      </div>
+      <div class="col-sm-12 col-lg-5">
+          <p> Copyright Jorah Entertainment  </p>
+      </div>
+      </div>
