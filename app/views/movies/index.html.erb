@@ -2,7 +2,7 @@
 <div class="jumbotron">
   <div class="container">
     <h1 class="display-4">Jorah Entertainment</h1>
-    <p class="lead">Download ,Watch For Free in our Movie Store</p>
+    <p class="lead">Create,Watch .Update and Delete  Movie in Store</p>
      <p><%= link_to "Sign Up before adding movie", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
   </div>
 </div>
@@ -13,6 +13,8 @@
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
       <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+       <%= link_to 'Show', movie %> |   |
+      <%= link_to 'Delete', movie, method: :delete, data: {confirm: 'Are you sure?'} %> 
     </div>
   </div>
 
